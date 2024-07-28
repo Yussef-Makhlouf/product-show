@@ -1,0 +1,67 @@
+<!-- <div class="container">
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by product name"
+        (input)="onSearchTermChange($event)"
+      />
+    </div>
+    <div class="col-md-4">
+      <select
+        class="form-control"
+        (change)="onCategoryChange($event)"
+      >
+      @for(category of categories;track category){
+        <option value="{{ category }}">{{ category }}</option>
+
+
+      }
+      </select>
+    </div>
+    <div class="col-md-4">
+      <select
+        class="form-control"
+        (change)="onSortDirectionChange($event)"
+      >
+        <option value="asc">Ascending</option>
+        <option value="desc">Descending</option>
+      </select>
+    </div>
+  </div>
+
+  <app-product-list [products]="filteredProducts"></app-product-list>
+</div> -->
+
+<div class="container mt-3">
+  <div class="row mb-3">
+    <div class="col-md-4">
+      <input
+        type="text"
+        class="form-control"
+        placeholder="Search by product name"
+        (input)="onSearchTermChange($event)"
+      />
+    </div>
+    <div class="col-md-4">
+      <select
+        class="form-control"
+        (change)="onCategoryChange($event)"
+      >
+      @for(category of categories;track category){
+        <option value="{{ category }}">{{ category }}</option>
+
+
+      }
+      </select>
+    </div>
+    <div class="col-md-4">
+      <select class="form-control" (change)="onSortDirectionChange($event)">
+        <option value="asc">Sort by Name: A to Z</option>
+        <option value="desc">Sort by Name: Z to A</option>
+      </select>
+    </div>
+  </div>
+  <app-product-list [products]="filteredProducts"></app-product-list>
+</div>
